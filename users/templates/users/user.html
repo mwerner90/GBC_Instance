@@ -1,0 +1,20 @@
+{% extends 'users/layout.html' %}
+
+{% block body %}
+<h1> Welcome, {{ request.user.first_name}}</h1>
+
+<ul>
+    <li>Username: {{request.user.username}}</li>
+    <li>Email: {{request.user.email}}</li>
+</ul>
+
+<h3>Options</h3>
+<ul>
+    <li><a href="{% url 'admin:index' %}">Administration Panel</a></li>
+    <li><a href="{% url 'inventory:index' %}">Inventory</a></li>
+    <li><a href="{% url 'attendance:index' %}">Attendance</a></li>
+</ul>
+<a href="{%url 'users:logout' %}">Logout</a>
+
+{% endblock body %}
+

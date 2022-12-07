@@ -1,1 +1,1 @@
-# GBC_Instance
+# EkklesiaRM

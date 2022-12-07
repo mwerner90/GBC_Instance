@@ -1,0 +1,95 @@
+{% extends "inventory/layout.html" %}
+
+{% block title %}{{ title }}{% endblock %}
+
+{% block top %}
+    <div>
+        <span class="church_name">Created for {{ church_name }}</span>
+    </div>
+{% endblock %}
+
+{% block body %}
+    <div class="row">
+  <div class="col-sm-6">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Count Inventory</h5>
+        <p class="card-text">Count each full item, rounding up to the nearest quarter or half.</p>
+        <a href="{% url 'inventory:count' %}" class="btn btn-primary">Start a Count</a>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-6">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Re-Stock</h5>
+        <p class="card-text">Running low on an item? This section allows you to "deposit" already inventoried items.</p>
+        <a href="{% url 'inventory:stock' %}" class="btn btn-primary">Re-Stock</a>
+      </div>
+    </div>
+  </div>
+</div>
+    {% comment %} <div class="row">
+  <div class="col-sm-6">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Add New Trackable Item</h5>
+        <p class="card-text">Are you wanting to track an entirely new item? This is where you want to be.</p>
+        <a href="{% url 'inventory:new_item' %}" class="btn btn-primary">Add Item</a>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-6">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Add a New Room</h5>
+        <p class="card-text">Create a new primary location for an item.</p>
+        <a href="{% url 'inventory:new_location' %}" class="btn btn-primary">Add Room</a>
+      </div>
+    </div>
+  </div>
+</div> {% endcomment %}
+<div class="row">
+
+    <div class="col-sm-6">
+      <h3>Items</h3>
+      <ul>
+        {% for item in items %}
+        <li>{{ item }}</li>
+        {% empty %}
+        <li>Please create an item.</li>
+        {% endfor %}
+    </ul>
+  </div>
+  <div class="col-sm-6">
+  <h3>Rooms</h3>
+{#            {% if locations %}#}
+      <ul>
+          {% for location in locations %}
+          <li>{{ location }}</li>
+          {% empty %}
+          <li>Please create a location</li>
+          {% endfor %}
+      </ul>
+    </div>      
+  </div>
+{#            {% else %}#}
+{#            {% endif %}#}
+
+
+    {#    <h3>inventory</h3>#}
+
+{#    {% if tasks %}#}
+{#        <ul>#}
+{#            {% for task in tasks %}#}
+{#                <li>{{task}}</li>#}
+{#                {% empty %}#}
+{#                <li>No tasks.</li>#}
+{#            {% endfor %}#}
+{#        </ul>#}
+{#    {% else %}#}
+{#        <p>There are no tasks. . .</p>#}
+{#    {% endif %}#}
+{#    <a href="/todo/add">Add Task</a>#}
+{#    <a href="{% url 'inventory:index' %}">Add a New Task</a>#}
+{% endblock %}

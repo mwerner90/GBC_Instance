@@ -1,0 +1,41 @@
+{% extends "inventory/layout.html" %}
+
+{% block title %}{{ title }}{% endblock %}
+
+{% block top %}
+    <div>
+        <span class="church_name">Created for {{ church_name }}</span>
+    </div>
+{% endblock %}
+
+{% block body %}
+    <div class="row">
+        <div class="col-sm-12">
+        <h3>Count Inventory</h3>
+            <form action="{% url 'inventory:count' %}" method="post" id="count_form">
+                {% csrf_token %}
+                {{ form }}
+                <input type="submit" value="Submit Count" class="btn btn-secondary">
+            </form>
+        </div>
+    </div>
+{#    Intert a form here to do the following#}
+{#    1 ----- render form to add location #}
+{#    2 ----- show list of each location. #}
+
+    {#    <h3>inventory</h3>#}
+
+{#    {% if tasks %}#}
+{#        <ul>#}
+{#            {% for task in tasks %}#}
+{#                <li>{{task}}</li>#}
+{#                {% empty %}#}
+{#                <li>No tasks.</li>#}
+{#            {% endfor %}#}
+{#        </ul>#}
+{#    {% else %}#}
+{#        <p>There are no tasks. . .</p>#}
+{#    {% endif %}#}
+{#    <a href="/todo/add">Add Task</a>#}
+{#    <a href="{% url 'inventory:index' %}">Add a New Task</a>#}
+{% endblock %}

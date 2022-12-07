@@ -1,0 +1,58 @@
+
+
+.church_logo {
+    display: inline;
+    height: auto;
+    max-width: 100%;
+    border: none;
+    box-sizing: border-box;
+    margin-top: 2.5%;
+    /* width: 25%; */
+}
+
+h3 {
+    font-family: sans-serif;
+}
+
+body {
+    padding-right: 10%;
+    padding-left: 10%;
+}
+
+.login_form {
+    padding-top: 2.5%;
+    display: block;
+    text-align: center;
+}
+
+.be-strong {
+    font-weight: bold;
+}
+
+.col-sm-6 {
+    padding-top: 2.5%;
+}
+
+.col-sm-12 {
+    padding-top: 2.5%;
+}
+
+.church_name {
+    /*text-align: left;*/
+    /*float: right;*/
+    text-align: right;
+    /*float: right;*/
+}
+
+#edge {
+    padding-top: 2.5%;
+}
+
+.created_for {
+    font-size: 2em;
+    
+}
+
+.error_message {
+    color: red;
+}

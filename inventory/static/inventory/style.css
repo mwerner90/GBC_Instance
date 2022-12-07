@@ -1,0 +1,33 @@
+h3 {
+    font-family: sans-serif;
+}
+
+body {
+    padding-right: 10%;
+    padding-left: 10%;
+}
+
+form {
+    padding-top: 2.5%;
+}
+
+.be-strong {
+    font-weight: bold;
+}
+
+.col-sm-6 {
+    padding-top: 2.5%;
+}
+
+.col-sm-12 {
+    padding-top: 2.5%;
+}
+
+.church_name {
+    /*text-align: left;*/
+    /*float: right;*/
+    text-align: right;
+    /*float: right;*/
+}
+
+
